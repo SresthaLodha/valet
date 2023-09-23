@@ -26,7 +26,7 @@ function add() {
 
 function uploadBackground() {
 	//Define function ‘uploadBackground’
-	ctx.drawImage(background_imgTag,0,0,canvas.height,canvas.width);
+	ctx.drawImage(background_imgTag,0,0,canvas.width,canvas.height);
 
 
 }
@@ -87,7 +87,7 @@ function up()
 function down(){
 
 	//Define function to move the car downward
-	if(greencar_y<=0){
+	if(greencar_y<=canvas.height-greencar_height){
 		greencar_y=greencar_y+10;
 		
 		uploadBackground();
@@ -107,7 +107,7 @@ function left()
 function right()
 {
 	//Define function to move the car right side
-	if(greencar_x<=0){
+	if(greencar_x<=canvas.width-greencar_width){
 		greencar_x=greencar_x+10;
 		
 		uploadBackground();
